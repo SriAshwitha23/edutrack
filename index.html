@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduTrack</title>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="login-page">
+    <h1>🎓 EduTrack</h1>
+    <p>Student Productivity Dashboard</p>
+    <input type="text" id="studentID" placeholder="Student ID">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<div class="container hidden" id="dashboard">
+    <h1 class ="main-title">EduTrack</h1>
+    <div class="navbar">
+        <button onclick="showModule('gpa')">GPA</button>
+        <button onclick="showModule('attendance')">Attendance</button>
+        <button onclick="showModule('tasks')">Tasks</button>
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- GPA -->
+    <div id="gpa" class="hidden">
+        <h2>GPA Tracker</h2>
+
+        <div id="subjects"></div>
+        <button onclick="calculateGPA()">Calculate GPA</button>
+        <p id ="errorMsg" class="error"></p>
+        <h2 id="gpa_result">GPA: 0.00</h2>
+        <div id="aiMessage"></div>
+    </div>
+
+    <!-- Attendance -->
+    <div id="attendance" class="hidden">
+        <h2>Attendance</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Total</th>
+                    <th>Conducted</th>
+                    <th>Attended</th>
+                    <th>%</th>
+                    <th>Message</th>
+                </tr>
+            </thead>
+            <tbody id="attendanceBody"></tbody>
+        </table>
+
+        <button onclick="calculateAttendance()">Calculate</button>
+    </div>
+
+    <!-- Tasks -->
+    <div id="tasks" class="hidden">
+        <h2>Tasks</h2>
+
+        <select id="task_subject">
+            <option value="">Select Subject</option>
+            <option>Programming</option>
+            <option>Engineering Graphics and Design</option>
+            <option>Calculus</option>
+            <option>Physics</option>
+            <option>BEEE</option>
+        </select>
+
+        <textarea id="task_description" placeholder="Task"></textarea>
+        <input type="date" id="task_deadline">
+
+        <button onclick="addTask()">Add</button>
+
+        <div id="taskList"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

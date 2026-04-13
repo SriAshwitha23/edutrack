@@ -1,0 +1,146 @@
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg,#667eea,#764ba2);
+    margin:0;
+    color:#333;
+}
+
+/* LOGIN */
+#login-page{
+    width:350px;
+    margin:120px auto;
+    padding:35px;
+    background:white;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+#login-page h1{
+    margin-bottom:20px;
+    color:#5a67d8;
+}
+
+/* INPUTS */
+input,textarea,select{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:10px;
+    border:1px solid #ddd;
+    outline:none;
+    transition:0.3s;
+}
+
+input:focus,textarea:focus,select:focus{
+    border-color:#667eea;
+}
+
+/* BUTTON */
+button{
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    background:#667eea;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#5a67d8;
+    transform:scale(1.05);
+}
+
+/* DASHBOARD */
+.container{
+    width:95%;
+    max-width:1100px;
+    margin:40px auto;
+    padding:25px;
+    border-radius:15px;
+    background:white;
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+.main-title{
+    text-align:center;
+
+    margin-bottom:20px;
+    color:#667eea;
+    font-size:28px;
+}
+
+/* NAVBAR */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.navbar button{
+    flex:1;
+    margin:5px;
+}
+
+/* SUBJECT CARDS */
+.subject{
+    background:#f9fafb;
+    padding:15px;
+    border-radius:12px;
+    margin-bottom:15px;
+    box-shadow:0 5px 10px rgba(0,0,0,0.05);
+}
+
+/* PROGRESS BAR */
+.progress{
+    height:10px;
+    background:#ddd;
+    border-radius:10px;
+    margin-top:10px;
+}
+
+.bar{
+    height:100%;
+    border-radius:10px;
+    background:linear-gradient(90deg,#4facfe,#00f2fe);
+}
+
+/* TABLE */
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+    border-bottom:1px solid #eee;
+}
+
+th{
+    background:#667eea;
+    color:white;
+}
+
+/* COLORS */
+.green{color:#16a34a;font-weight:bold;}
+.yellow{color:#eab308;font-weight:bold;}
+.red{color:#dc2626;font-weight:bold;}
+
+/* TASK CARD */
+#taskList .subject{
+    border-left:5px solid #667eea;
+}
+
+/* ERROR */
+.error{
+    color:red;
+    text-align:center;
+}
+
+/* HIDDEN */
+.hidden{
+    display:none;
+}
